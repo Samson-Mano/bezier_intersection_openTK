@@ -117,8 +117,8 @@ namespace bezier_intersection
                 gr0.DrawCurve(bz_pen, bz_paint_pts.ToArray());
 
                 // Paint the end points
-                cntrl_pts[0].paint_end_points(gr0);
-                cntrl_pts[cntrl_pts.Count - 1].paint_end_points(gr0);
+                cntrl_pts[0].paint_end_points(gr0,true);
+                cntrl_pts[cntrl_pts.Count - 1].paint_end_points(gr0,false);
 
                 // Paint the control points
                 for (int i = 1; i < (cntrl_pts.Count - 1); i++)
@@ -194,8 +194,8 @@ namespace bezier_intersection
             }
 
             // Paint the end points
-            this._cntrl_pts[0].paint_end_points(gr0);
-            this._cntrl_pts[cntrl_pts.Count - 1].paint_end_points(gr0);
+            this._cntrl_pts[0].paint_end_points(gr0,true);
+            this._cntrl_pts[cntrl_pts.Count - 1].paint_end_points(gr0,false);
 
             // Paint the control points
             for (int i = 1; i < (cntrl_pts.Count - 1); i++)

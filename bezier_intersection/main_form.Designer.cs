@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(main_form));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.stBezierToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,9 +48,9 @@
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel_mouseloc = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel_zoom_value = new System.Windows.Forms.ToolStripStatusLabel();
+            this.toolStripStatusLabel_sidepanel_coord = new System.Windows.Forms.ToolStripStatusLabel();
             this.glControl_side_panel = new OpenTK.GLControl();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.toolStripStatusLabel_sidepanel_coord = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
             this.main_panel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.main_panel_mt_pic)).BeginInit();
@@ -210,6 +211,12 @@
             this.toolStripStatusLabel_zoom_value.Size = new System.Drawing.Size(81, 17);
             this.toolStripStatusLabel_zoom_value.Text = "Zoom = 100%";
             // 
+            // toolStripStatusLabel_sidepanel_coord
+            // 
+            this.toolStripStatusLabel_sidepanel_coord.Name = "toolStripStatusLabel_sidepanel_coord";
+            this.toolStripStatusLabel_sidepanel_coord.Size = new System.Drawing.Size(42, 17);
+            this.toolStripStatusLabel_sidepanel_coord.Text = "[ex,ey]";
+            // 
             // glControl_side_panel
             // 
             this.glControl_side_panel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -235,12 +242,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // toolStripStatusLabel_sidepanel_coord
-            // 
-            this.toolStripStatusLabel_sidepanel_coord.Name = "toolStripStatusLabel_sidepanel_coord";
-            this.toolStripStatusLabel_sidepanel_coord.Size = new System.Drawing.Size(42, 17);
-            this.toolStripStatusLabel_sidepanel_coord.Text = "[ex,ey]";
-            // 
             // main_form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -250,6 +251,7 @@
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.main_panel);
             this.Controls.Add(this.menuStrip1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(700, 350);
             this.Name = "main_form";

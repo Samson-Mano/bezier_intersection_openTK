@@ -34,14 +34,19 @@ namespace bezier_intersection
             this.pt_pen = new Pen(c_p, 2);
         }
 
-        public void paint_end_points(Graphics gr0)
+        public void paint_end_points(Graphics gr0, bool is_start_pt)
         {
             // Paint the ellipse for end points
             float tx = (float)this._x - (pt_diameter * 0.5f);
             float ty = (float)this._y - (pt_diameter * 0.5f);
             gr0.FillEllipse(pt_pen.Brush, tx, ty, pt_diameter, pt_diameter);
 
-            string str1 = "[" + tx.ToString() + ", " + ty.ToString() + "]";
+            string str1 = " A";
+            if(is_start_pt == false)
+            {
+                str1 = " B";
+            }
+            str1 = str1 + "[" + tx.ToString() + ", " + ty.ToString() + "]";
             gr0.DrawString(str1, new Font("Cambria Math", 12), pt_pen.Brush, new PointF(tx, ty));
         }
 
